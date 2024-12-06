@@ -62,3 +62,40 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+<!-- Bagian Menu -->
+<section id="menu">
+    <h2>Our Special Menu</h2>
+    <div class="menu-items">
+        <div class="menu-item">
+            <img src="images/seblak-komplit.jpg" alt="Seblak Komplit">
+            <h3>Seblak Komplit</h3>
+            <p>Rp 25,000</p>
+            <button class="order-button" onclick="openOrderForm('Seblak Komplit')">Order Now</button>
+        </div>
+    </div>
+</section>
+
+<!-- Formulir Pemesanan -->
+<section id="order-form" class="order-form">
+    <h2>Place Your Order</h2>
+    <form id="order" action="#" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        
+        <label for="menu-item">Menu Item:</label>
+        <input type="text" id="menu-item" name="menu-item" placeholder="Seblak Komplit" readonly>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" placeholder="1" min="1" required>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" placeholder="Delivery Address" required></textarea>
+
+        <button type="submit">Place Order</button>
+    </form>
+    <button class="close-btn" onclick="closeOrderForm()">Close</button>
+</section>
