@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Seblak | Seblak Prasmanan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Pemesanan Seblak Prasmanan</h1>
+            <p>Silakan isi formulir berikut untuk memesan seblak kesukaan Anda!</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="index.html">Beranda</a>
+            <a href="menu.html">Menu</a>
+            <a href="order.html">Pemesanan</a> <!-- Tambahkan link ke halaman pemesanan -->
+        </div>
+    </nav>
+
+    <section class="order-form">
+        <div class="container">
+            <h2>Formulir Pemesanan</h2>
+            <form action="submit_order.php" method="POST">
+                <!-- Input untuk nama -->
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+
+                <!-- Input untuk nomor telepon -->
+                <label for="phone">No. Telepon:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <!-- Dropdown menu untuk memilih menu -->
+                <label for="menu-item">Pilih Menu:</label>
+                <select id="menu-item" name="menu-item" required>
+                    <option value="seblak-original">Seblak Original</option>
+                    <option value="seblak-ceker">Seblak Ceker</option>
+                    <option value="seblak-mie">Seblak Mie</option>
+                </select>
+
+                <!-- Input untuk jumlah pesanan -->
+                <label for="quantity">Jumlah:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+
+                <!-- Tombol kirim pemesanan -->
+                <button type="submit">Pesan Sekarang</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Seblak Prasmanan. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
